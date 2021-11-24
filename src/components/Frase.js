@@ -3,7 +3,7 @@ import styles from './Frase.module.css';
 function Frase() {
     return(
         <div className={styles.fraseContainer}>
-            <p>Componente frase</p>
+            <p className={styles.fraseContent}>Componente frase</p>
         </div>
     )
 } 
