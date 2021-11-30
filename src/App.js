@@ -7,19 +7,18 @@ import FormTest from './components/FormTest';
 import Frase from './components/Frase';
 
 import List from './components/List';
+import OutraLista from './components/OutraLista';
 import Pessoa from './components/Pessoa';
 import SayMyName from './components/SayMyName';
 
 function App() {
   
+  const meusItens = ['1', '2', '3']
+
   return (
     <div className="App">
-      <Evento />
-      <Form />
-      <FormTest />
-
-      <h1>Renderização Condicional</h1>
-      <Condicional />
+      <OutraLista itens={meusItens} />
+      <OutraLista itens={[]} />
     </div>
   );
 }
