@@ -1,26 +1,29 @@
-import './App.css';
-import Condicional from './components/Condicional';
-import Evento from './components/Evento';
-import Button from './components/evento/Button';
-import Form from './components/Form';
-import FormTest from './components/FormTest';
-import Frase from './components/Frase';
-
-import List from './components/List';
-import OutraLista from './components/OutraLista';
-import Pessoa from './components/Pessoa';
-import SayMyName from './components/SayMyName';
-
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'; 
+import Home from './pages/Home'
 function App() {
-  
-  const meusItens = ['1', '2', '3']
+
 
   return (
-    <div className="App">
-      <OutraLista itens={meusItens} />
-      <OutraLista itens={[]} />
-    </div>
-  );
+    <Router>
+      <ul>
+        <li>
+        <Link to="/">Home</Link>
+        </li>
+        <li>
+        <Link to="/empresa">Empresa</Link>
+        </li>
+        <li>
+        <Link to="/contato">Contato</Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route exact 
+          path="/"
+          element={<Home />} />
+      </Routes>
+
+    </Router>
+  )
 }
 
-export default App;
+export default App
